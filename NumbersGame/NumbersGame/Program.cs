@@ -9,19 +9,20 @@ namespace NumbersGame
             StartSequence();
         }
 
-        //----------
+        //==============================
         static void StartSequence()
         {
             Console.WriteLine("Welcome to my game! Let's do some math!");
             int input = -1;
             try
             {
-                bool toSml = false;
+                bool toSml;
                 do
                 {
+                    toSml = false;
                     Console.WriteLine("Please enter a number greater then zero.");
                     input = Convert.ToInt32(Console.ReadLine());
-                    if (input < 0)
+                    if (input < 1)
                     {
                         Console.WriteLine("That numbet is less then 0 and will not work.");
                         toSml = true;
@@ -64,7 +65,7 @@ namespace NumbersGame
             }
         }
 
-        //----------
+        //================================
         static int[] Populate(int[] arr)
         {
             string input;
@@ -79,7 +80,7 @@ namespace NumbersGame
             return arr;
         }
 
-        //------------
+        //===========================
         static int GetSum(int[] arr)
         {
             int sum = 0;
@@ -109,6 +110,7 @@ namespace NumbersGame
             return product;
         }
 
+        //=====================================
         static decimal GetQuotient(int product)
         {
             Console.WriteLine($"Please enter a number to divide your product {product} by");
